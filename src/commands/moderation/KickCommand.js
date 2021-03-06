@@ -23,6 +23,7 @@ module.exports = class KickCommand extends BaseCommand {
     // .kick @user reason
     if (!args[0]) return message.channel.send("You need to mention a user to kick. \`.kick @user reason\`").then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
     if (!mentionedMember) return message.channel.send("The member your tried to mention is not in the server.").then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
+    if (!mentionedMember.kickable) return message.channel.send("That user is not kickable.");
     try {
       await mentionedMember.send(kickEmbed);
     } catch (err) {
