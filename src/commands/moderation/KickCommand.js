@@ -7,7 +7,9 @@ module.exports = class KickCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send ("You do not have the requirements to use this command.").then(msg => msg.delete({timeout: 7000}));
+    if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send ("You do not have the required permissions to use this command.")
+      .then(msg => msg.delete({timeout: 7000}))
+      .then(message.delete({timeout: 7000}));
     const mentionedMember = message.mentions.members.first();
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason was provided";
@@ -19,8 +21,8 @@ module.exports = class KickCommand extends BaseCommand {
       .setFooter(client.user.tag, client.user.displayAvatarURL());
 
     // .kick @user reason
-    if (!args[0]) return message.channel.send("You need to mention a user to kick. \`.kick @user reason\`").then(msg => msg.delete({timeout: 7000}));
-    if (!mentionedMember) return message.channel.send("The member your tried to mention is not in the server.").then(msg => msg.delete({timeout: 7000}));
+    if (!args[0]) return message.channel.send("You need to mention a user to kick. \`.kick @user reason\`").then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
+    if (!mentionedMember) return message.channel.send("The member your tried to mention is not in the server.").then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
     try {
       await mentionedMember.send(kickEmbed);
     } catch (err) {
@@ -28,10 +30,11 @@ module.exports = class KickCommand extends BaseCommand {
     }
 
     try {
-      await mentionedMember.kick(reason);
+      await mentionedMember.kick(reason)
+        .then(message.delete());
     } catch (err) {
       console.log(err);
-      return message.channel.send("Unable to kick user mentioned.");
-    }
+      return message.channel.send("Unable to kick user mentioned.").then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
+    } 
   }
 }
