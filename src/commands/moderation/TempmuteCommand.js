@@ -8,13 +8,14 @@ module.exports = class TempmuteCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    if (!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send('You do not have the required permissions.');
-    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send('Zodex Bot requires \`MANAGE_ROLES\` permissons.');
+    if (!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send('You do not have the required permissions.').then(deleteMessages);
+    if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send('Zodex Bot requires \`MANAGE_ROLES\` permissons.').then(deleteMessages);
 
     const muteRole = message.guild.roles.cache.get('816513027607756801');
     const memberRole = message.guild.roles.cache.get('817875564060475404');
     const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const taggedUser = message.mentions.users.first();
+    const deleteMessages = msg => msg.delete({timeout: 7000}).then(message.delete({timeout: 7000}));
     let time = args[1];
     let reason = args.slice(2).join(" ");
     const tempmuteEmbed = new Discord.MessageEmbed()
@@ -28,10 +29,10 @@ module.exports = class TempmuteCommand extends BaseCommand {
       .setColor("#c377e0")
       .setTimestamp();
     
-    if (!args[0]) return message.channel.send('You need to declare a user, time and reason. \`.tempmute @user time reason\`');
-    if (!mentionedMember) return message.channel.send('That user is not in this server.');
-    if (!mentionedMember.roles.highest.position >= message.member.roles.highest.position) return message.channel.send('That user cannot be muted');
-    if (!time) return message.channel.send('You need to declare a duration of time. \`.tempmute @user time reason\`');
+    if (!args[0]) return message.channel.send('You need to declare a user, time and reason. \`.tempmute @user time reason\`').then(deleteMessages);
+    if (!mentionedMember) return message.channel.send('That user is not in this server.').then(deleteMessages);
+    if (!mentionedMember.roles.highest.position >= message.member.roles.highest.position) return message.channel.send('That user cannot be muted').then(deleteMessages);
+    if (!time) return message.channel.send('You need to declare a duration of time. \`.tempmute @user time reason\`').then(deleteMessages);
     if (!reason) reason = 'No reason was provided';
 
     await mentionedMember.roles.add(muteRole.id).catch(err => console.log(err));
