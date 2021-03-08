@@ -10,7 +10,7 @@ module.exports = class HelpCommand extends BaseCommand {
     const sectionEmbed = new Discord.MessageEmbed()
    .setTitle('Bot Help Sections')
    .setDescription('Use .help section Name to access another section.\nSections:\ninformation\nfun\nmoderation\ntool')
-   .addField('Fun Commands', 'Commands that all users can user that are for fun and have no purpose.')
+   .addField('Fun Commands', 'Commands that all users can use that are for fun.')
    .addField('Information commands', 'Commands that return some form of important imformation.')
    .addField('Moderation commands', 'Commands that are for moderation purposes within a server.')
    .addField('Tool commands', 'Commands that add features to a server.')
