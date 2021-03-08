@@ -26,7 +26,8 @@ const funEmbed = new Discord.MessageEmbed()
    .addField('Avatar Command', 'Returns a users avatar.')
    .addField('Meme Commands', 'Returns a Meme to the channel.')
    //.addField('Say Command', 'Make the bot say a message to the channel.')
-   .addField('Snipe Command', 'Returns the last deleted message within a channel.');
+   .addField('Snipe Command', 'Returns the last deleted message within a channel.')
+   .addField('Suggest Command', 'Creates a suggestion.');
  
 const moderationEmbed = new Discord.MessageEmbed()
    .setTitle('Moderation Commands.')
