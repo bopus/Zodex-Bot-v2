@@ -20,12 +20,10 @@ module.exports = class HelpCommand extends BaseCommand {
 const infoEmbed = new Discord.MessageEmbed()  
    .setTitle('Information Commands.')
    .addField('Help Commands', 'This commands shows the user all the commands possable.')
-<<<<<<< HEAD
    //.addField('Socail Command', 'Displays social media in an embed.');
-=======
    .setColor("#c377e0");
-   //.addField('Socail Command', 'Displays social media in an embed.')
->>>>>>> sub
+
+
  
 const funEmbed = new Discord.MessageEmbed()
    .setTitle('Fun Commands.')
