@@ -10,16 +10,18 @@ module.exports = class HelpCommand extends BaseCommand {
     const sectionEmbed = new Discord.MessageEmbed()
    .setTitle('Bot Help Sections')
    .setDescription('Use .help section Name to access another section.\nSections:\ninformation\nfun\nmoderation\ntool')
-   .addField('Fun Commands', 'Commands that all users can user that are for fun and have no purpose.')
+   .addField('Fun Commands', 'Commands that all users can use that are for fun.')
    .addField('Information commands', 'Commands that return some form of important imformation.')
    .addField('Moderation commands', 'Commands that are for moderation purposes within a server.')
    .addField('Tool commands', 'Commands that add features to a server.')
-   .setFooter(client.user.tag, client.user.displayAvatarURL());
+   .setFooter(client.user.tag, client.user.displayAvatarURL())
+   .setColor("#c377e0");
  
 const infoEmbed = new Discord.MessageEmbed()  
    .setTitle('Information Commands.')
    .addField('Help Commands', 'This commands shows the user all the commands possable.')
-   .addField('Socail Command', 'Displays social media in an embed.');
+   .setColor("#c377e0");
+   //.addField('Socail Command', 'Displays social media in an embed.')
  
 const funEmbed = new Discord.MessageEmbed()
    .setTitle('Fun Commands.')
@@ -27,7 +29,8 @@ const funEmbed = new Discord.MessageEmbed()
    .addField('Meme Commands', 'Returns a Meme to the channel.')
    //.addField('Say Command', 'Make the bot say a message to the channel.')
    .addField('Snipe Command', 'Returns the last deleted message within a channel.')
-   .addField('Suggest Command', 'Creates a suggestion.');
+   .addField('Suggest Command', 'Creates a suggestion.')
+   .setColor("#c377e0");
  
 const moderationEmbed = new Discord.MessageEmbed()
    .setTitle('Moderation Commands.')
@@ -43,11 +46,13 @@ const moderationEmbed = new Discord.MessageEmbed()
    .addField('Tempmute Command', 'Tempmutes a member in a server')
    .addField('Unban Command', 'Unbans a member from the server')
    .addField('Unlock Command', 'Unlocks a channel in the server')
-   .addField('Unmute Command', 'Unmutes a member in a server');
+   .addField('Unmute Command', 'Unmutes a member in a server')
+   .setColor("#c377e0");
  
 const toolEmbed = new Discord.MessageEmbed()
    .setTitle('Tool Commands.')
-   .addField('this section is currently empy.');
+   .addField('this section is currently empy.')
+   .setColor("#c377e0");
  
 if (!args[0]) return message.channel.send(sectionEmbed);
 if (args[0] == 'information') return message.channel.send(infoEmbed);
