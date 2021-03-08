@@ -29,6 +29,6 @@ module.exports = class BanCommand extends BaseCommand {
     await mentionedMember.ban({
       days: 7,
       reason: reason
-    }).catch(err => console.log(err)).then(() => message.channel.send(mentionedMember.user.tag + " has been banned"))
+    }).catch(err => console.log(err)).then(() => message.channel.send(mentionedMember.user.tag + " has been banned")).then(msg => msg.delete({timeout: 7000})).then(message.delete({timeout: 7000}));
   }
 }
