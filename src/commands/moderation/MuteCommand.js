@@ -11,8 +11,8 @@ module.exports = class MuteCommand extends BaseCommand {
     if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send("Bot does not have the required permissions to use this command.").then(deleteMessages);
 
     let reason = args.slice(1).join(" ");
-    const muteRole = message.guild.roles.cache.get('816513027607756801');
-    const memberRole = message.guild.roles.cache.get('817875564060475404');
+    const muteRole = message.guild.roles.cache.get('816522515849281578');
+    const memberRole = message.guild.roles.cache.get('709566762714398851');
     const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const taggedUser = message.mentions.users.first();
     const deleteMessages = msg => msg.delete({timeout: 7000}).then(message.delete({timeout: 7000}));

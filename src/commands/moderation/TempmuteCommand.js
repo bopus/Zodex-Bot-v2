@@ -11,8 +11,8 @@ module.exports = class TempmuteCommand extends BaseCommand {
     if (!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.send('You do not have the required permissions.').then(deleteMessages);
     if (!message.guild.me.hasPermission("MANAGE_ROLES")) return message.channel.send('Zodex Bot requires \`MANAGE_ROLES\` permissons.').then(deleteMessages);
 
-    const muteRole = message.guild.roles.cache.get('816513027607756801');
-    const memberRole = message.guild.roles.cache.get('817875564060475404');
+    const muteRole = message.guild.roles.cache.get('816522515849281578');
+    const memberRole = message.guild.roles.cache.get('709566762714398851');
     const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const taggedUser = message.mentions.users.first();
     const deleteMessages = msg => msg.delete({timeout: 7000}).then(message.delete({timeout: 7000}));
