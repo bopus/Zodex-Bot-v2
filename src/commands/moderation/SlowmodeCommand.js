@@ -19,7 +19,7 @@ module.exports = class SlowmodeCommand extends BaseCommand {
       message.channel.send(`Slowmode for ${message.channel} has been set to ${value} seconds.`);
     } catch (err) {
       console.log(err);
-      message.channel.send('ERROR 404: Could not set slowmode. Please contact BOPUS');
+      message.channel.send('ERROR 404: Could not set slowmode. Please contact BOPUS on discord');
     }
   }
 }
