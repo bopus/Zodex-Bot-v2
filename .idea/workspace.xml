@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aad0f052-69bc-412a-b490-bd52e016a718" name="Default Changelist" comment="added SlowmodeCommand.js">
+      <change beforePath="$PROJECT_DIR$/slappey.json" beforeDir="false" afterPath="$PROJECT_DIR$/slappey.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/moderation/SlowmodeCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/moderation/SlowmodeCommand.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/commands/fun/MemeCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/fun/SuggestCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/fun/SnipeCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/fun/AvatarCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/info/HelpCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/UnlockCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/UnmuteCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/TempmuteCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/MuteCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/ClearCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/BanCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/KickCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/SlowmodeCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/LockCommand.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/commands/moderation/UnbanCommand.js" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1pjXDoXyR3BWlDfUvvVI8EqkHZs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aad0f052-69bc-412a-b490-bd52e016a718" name="Default Changelist" comment="" />
+      <created>1615697356153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615697356153</updated>
+      <workItem from="1615697357520" duration="61000" />
+      <workItem from="1615697444580" duration="29000" />
+      <workItem from="1615697492574" duration="770000" />
+      <workItem from="1615775831508" duration="1027000" />
+    </task>
+    <task id="LOCAL-00001" summary="added SlowmodeCommand.js">
+      <created>1615776656511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615776656511</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added SlowmodeCommand.js">
+      <created>1615776758847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615776758847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added SlowmodeCommand.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="added SlowmodeCommand.js" />
+  </component>
+</project>
